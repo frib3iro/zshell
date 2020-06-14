@@ -11,7 +11,7 @@ seta='\e[32;1m==>\e[m'
 [[ "$UID" -ne '0' ]] && { echo -e "${vr}Logue-se como root${fim}"; exit 1;}
 
 echo -e "${az}Instalando o zsh${fim}"                                                              
-echo $pass_user | sudo -S sudo pacman -S zsh
+pacman -Sy zsh
 
 echo -e "${seta} ${az}Instalando o Oh My Zsh${fim}"                                                              
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -33,6 +33,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 echo -e "${az}Baixando e instalando o fzf${fim}"                                                              
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
+cp -r .vim .zshrc .vimrc .themes ~/
 # ---------------------------------------------------------------------
 # Importar as configuracoes e temas do OhMyZsh para o usuario root
 
