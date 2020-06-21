@@ -28,11 +28,3 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 echo -e "${az}Baixando e instalando o fzf${fim}" 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 # ---------------------------------------------------------------------
-
-# Importar as configuracoes e temas do OhMyZsh para o usuario root
-sudo cp /home/$USER/.zshrc /root
-sudo cp -r /home/$USER/.oh-my-zsh /root
-sudo sed -i "s/$USER/tempuser/g" /root/.zshrc
-sudo sed -i 's#export ZSH="/home/tempuser/.oh-my-zsh"#export ZSH="/root/.oh-my-zsh"#g' /root/.zshrc
-echo "OhMyZsh to Root ---> Operação concluída."
-
