@@ -1,0 +1,11 @@
+Copie o arquivo “.zshrc” para o diretório “/root”.
+sudo cp /home/$USER/.zshrc /root
+Copie a pasta “.oh-my-zsh” para o diretório “/root”:
+
+sudo cp -r /home/$USER/.oh-my-zsh /root
+Edite o arquivo “.zshrc” que está no diretório “/root”:
+
+sudo nano /root/.zshrc
+• Cole a linha abaixo dentro do arquivo “.zshrc”, de forma que fique igual a imagem abaixo:  
+
+export ZSH="/root/.oh-my-zsh"
