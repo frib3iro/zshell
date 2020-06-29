@@ -7,7 +7,6 @@ vr='\e[31;1m'
 am='\e[33;1m'
 fim='\e[m'
 seta='\e[32;1m==>\e[m'
-# variaveis --------------------------------------------
 
 # ------------------------------------------------------
 echo -e "${az}Instalando o zsh${fim}" 
@@ -22,12 +21,12 @@ clear
 
 echo -e "${az}Mudando o bash pelo zsh para $user${fim}" 
 sleep 2s
-usermod -s /usr/bin/zsh $USER
+sudo usermod -s /usr/bin/zsh $USER
 clear
 
 echo -e "${az}Mudando o bash pelo zsh para o $root${fim}" 
 sleep 2s
-usermod -s /usr/bin/zsh root
+sudo usermod -s /usr/bin/zsh root
 clear
 
 echo -e "${az}Instalando o syntax-highlighting${fim}" 
@@ -45,4 +44,3 @@ sleep 2s
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 clear
 
-# ------------------------------------------------------
