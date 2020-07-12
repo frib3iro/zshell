@@ -45,11 +45,10 @@ fi
 
 echo -e "${az}Editando o arquivo .zshrc${fim}"
 sleep 2s
-if sudo sed -i 's#export ZSH="/home/fabio/.oh-my- zsh"#export ZSH="/root/.oh-my-zsh"#g' /root/.zshrc; then
+if sudo sed -i 's#export ZSH="/home/fabio/.oh-my-zsh"#export ZSH="/root/.oh-my-zsh"#' /root/.zshrc; then
     echo -e "${vd}Sucesso${fim}"
 else
     echo -e "${vr}Falhou!${fim}"
 fi
 
 echo -e "${az}OhMyZsh to Root ${seta} Operação concluída${fim}"
-
